@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shopping_bags/constants.dart';
 import 'package:shopping_bags/models/product.dart';
 import 'package:shopping_bags/screens/details/components/product_title_with_image.dart';
 
 import 'color_and_size.dart';
+import 'counter_btn_heart.dart';
 import 'description.dart';
 
 class Body extends StatelessWidget {
@@ -41,7 +43,37 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
-                      Description(product: product)
+                      Description(product: product),
+                      CounterBtnHeart(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: kDefaultPadding),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 58,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(18),
+                                border: Border.all(
+                                  color: product.color,
+                                ),
+                              ),
+                              child: IconButton(
+                                  onPressed: () {},
+                                  icon: SvgPicture.asset(
+                                      "assets/icons/add_to_cart.svg")),
+                            ),
+                            SizedBox(
+                              height: 50,
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Text("Buy Now"),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
