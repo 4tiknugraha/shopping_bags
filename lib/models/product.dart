@@ -17,7 +17,7 @@ class Product {
 
 List<Product> products = [
   Product(
-      id: 1,
+      id: 11,
       title: "Office Code",
       price: 4241,
       size: 12,
@@ -57,14 +57,13 @@ List<Product> products = [
       image: "assets/images/oldpink.png",
       color: const Color.fromARGB(255, 240, 53, 131)),
   Product(
-    id: 6,
-    title: "Office Code",
-    price: 4234,
-    size: 12,
-    description: dummyText,
-    image: "assets/images/red.png",
-    color: const Color.fromARGB(255, 239, 69, 69),
-  ),
+      id: 6,
+      title: "Office Code",
+      price: 4234,
+      size: 12,
+      description: dummyText,
+      image: "assets/images/red.png",
+      color: const Color.fromARGB(255, 239, 69, 69)),
 ];
 
 String dummyText =

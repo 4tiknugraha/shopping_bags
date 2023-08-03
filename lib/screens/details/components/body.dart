@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:shopping_bags/constants.dart';
 import 'package:shopping_bags/models/product.dart';
@@ -13,7 +11,7 @@ import 'description.dart';
 class Body extends StatelessWidget {
   final Product product;
 
-  const Body({super.key, required this.product});
+  Body({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
