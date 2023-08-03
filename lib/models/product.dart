@@ -23,7 +23,7 @@ List<Product> products = [
       size: 12,
       description: dummyText,
       image: "assets/images/orange.png",
-      color: Color.fromARGB(255, 247, 141, 95)),
+      color: const Color.fromARGB(255, 247, 141, 95)),
   Product(
       id: 2,
       title: "Belt Bag",
@@ -31,7 +31,7 @@ List<Product> products = [
       size: 8,
       description: dummyText,
       image: "assets/images/pink.png",
-      color: Color.fromARGB(255, 246, 94, 165)),
+      color: const Color.fromARGB(255, 246, 94, 165)),
   Product(
       id: 3,
       title: "Hang Top",
@@ -39,7 +39,7 @@ List<Product> products = [
       size: 10,
       description: dummyText,
       image: "assets/images/bag_1.png",
-      color: Color(0xFF3D82AE)),
+      color: const Color(0xFF3D82AE)),
   Product(
       id: 4,
       title: "Old Fashion",
@@ -47,7 +47,7 @@ List<Product> products = [
       size: 11,
       description: dummyText,
       image: "assets/images/oldblue.png",
-      color: Color.fromARGB(255, 21, 50, 132)),
+      color: const Color.fromARGB(255, 21, 50, 132)),
   Product(
       id: 5,
       title: "Office Code",
@@ -55,7 +55,7 @@ List<Product> products = [
       size: 12,
       description: dummyText,
       image: "assets/images/oldpink.png",
-      color: Color.fromARGB(255, 240, 53, 131)),
+      color: const Color.fromARGB(255, 240, 53, 131)),
   Product(
     id: 6,
     title: "Office Code",
@@ -63,7 +63,7 @@ List<Product> products = [
     size: 12,
     description: dummyText,
     image: "assets/images/red.png",
-    color: Color.fromARGB(255, 239, 69, 69),
+    color: const Color.fromARGB(255, 239, 69, 69),
   ),
 ];
 
