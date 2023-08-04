@@ -135,7 +135,7 @@ class _NewCollectionState extends State<NewCollection> {
                       width: 250,
                       child: TextButton(
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.orangeAccent),
+                            backgroundColor: Colors.black87),
                         onPressed: () {
                           Navigator.push(
                               context,
@@ -143,7 +143,7 @@ class _NewCollectionState extends State<NewCollection> {
                                   builder: (context) => HomeScreen()));
                         },
                         child: Text(
-                          "Get Start!".toUpperCase(),
+                          "Get Started!".toUpperCase(),
                           style: const TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.bold,
