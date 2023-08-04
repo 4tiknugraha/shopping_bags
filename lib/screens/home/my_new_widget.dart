@@ -1,10 +1,3 @@
-// // part of "home_screen.dart";
-// // class MyNewWidget extends StatelessWidget {
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return AppBar;
-// //   }
-// // }
 import 'package:flutter/material.dart';
 import 'package:shopping_bags/constants.dart';
 import 'package:shopping_bags/screens/home/home_screen.dart';
@@ -44,8 +37,13 @@ class _NewCollectionState extends State<NewCollection> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  // padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  padding: EdgeInsets.only(right: 20.0, left: 20.0, top: 80.0),
+                  // padding: EdgeInsets.all(120 / 4),
+                  // padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+                  padding: EdgeInsets.only(
+                      right: kDefaultPadding,
+                      left: kDefaultPadding,
+                      top: 45,
+                      bottom: 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -55,7 +53,7 @@ class _NewCollectionState extends State<NewCollection> {
                             fontSize: 25, color: Colors.grey.shade500),
                       ),
                       Text(
-                        "Online Bag",
+                        "Shoping Bags",
                         style: TextStyle(
                             fontSize: 40, fontWeight: FontWeight.bold),
                       ),
@@ -66,17 +64,17 @@ class _NewCollectionState extends State<NewCollection> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(kDefaultPadding),
                       child: Row(
                         children: _buildIndicator(),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(kDefaultPadding),
                       child: MaterialButton(
                         height: 50,
                         minWidth: 50,
-                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        // padding: EdgeInsets.symmetric(horizontal: 10),
                         color: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
@@ -86,12 +84,8 @@ class _NewCollectionState extends State<NewCollection> {
                               duration: Duration(milliseconds: 500),
                               curve: Curves.ease);
                           setState(() {});
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()),
-                          );
                         },
+
                         child: Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.white,
@@ -104,7 +98,7 @@ class _NewCollectionState extends State<NewCollection> {
               ],
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.72,
               width: MediaQuery.of(context).size.width,
               child: PageView(
                 onPageChanged: (int page) {
@@ -114,25 +108,49 @@ class _NewCollectionState extends State<NewCollection> {
                 },
                 controller: _pageController,
                 children: <Widget>[
-                  Image.network(
-                    'https://images.unsplash.com/photo-1525457136159-8878648a7ad0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHdpbnRlciUyMGNsb3RoaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+                  Image.asset(
+                    'assets/images/1.avif',
                     fit: BoxFit.cover,
                   ),
-                  Image.network(
-                    'https://images.unsplash.com/photo-1549902529-a515e31f0c1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHdpbnRlciUyMGNsb3RoaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+                  Image.asset(
+                    'assets/images/2.webp',
                     fit: BoxFit.cover,
                   ),
-                  Image.network(
-                    'https://images.unsplash.com/photo-1611080922224-2e0c006a4943?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60',
+                  Image.asset(
+                    'assets/images/3.webp',
                     fit: BoxFit.cover,
                   ),
-                  Image.network(
-                    'https://images.unsplash.com/flagged/photo-1574876668890-2ff765c77cda?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU3fHx3aW50ZXIlMjBjbG90aGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+                  Image.asset(
+                    'assets/images/4.webp',
                     fit: BoxFit.cover,
                   ),
-                  Image.network(
-                    'https://images.unsplash.com/photo-1575919988855-f727358015b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHdpbnRlciUyMGNsb3RoaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+                  Image.asset(
+                    'assets/images/5.jpeg',
                     fit: BoxFit.cover,
+                  ),
+                  // Button widget on top of the background
+                  Center(
+                    child: SizedBox(
+                      height: 50,
+                      width: 250,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.orangeAccent),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()));
+                        },
+                        child: Text(
+                          "Get Start!".toUpperCase(),
+                          style: const TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

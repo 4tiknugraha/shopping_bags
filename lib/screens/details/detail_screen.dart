@@ -35,6 +35,7 @@ class DetailsScreen extends StatelessWidget {
       ),
       actions: [
         IconButton(
+          tooltip: 'Search people',
           icon: SvgPicture.asset(
             "assets/icons/search.svg",
           ),
@@ -48,7 +49,7 @@ class DetailsScreen extends StatelessWidget {
         ),
         const SizedBox(
           width: kDefaultPadding / 2,
-        )
+        ),
       ],
     );
   }
